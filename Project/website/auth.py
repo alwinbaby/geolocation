@@ -63,3 +63,8 @@ def signup():
             
     return render_template("login.html", user=current_user)
 
+@auth.route('/find_me')
+def find_me():
+    return render_template("find_me.html")
+
+

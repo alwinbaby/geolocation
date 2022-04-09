@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}Map {% endblock %}
+
+
+
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='maps.css')}}">
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+<script src="{{url_for('static', filename='traffic.js')}}"></script>
+<style>
+    body{
+        background-image: none;
+        background-color:rgba(255, 255, 255, 0.5);
+        
+    }
+    #map{
+        height: 700px;
+        position: relative;
+    
+    }
+    #none {
+        border-style: hidden;
+    }
+</style>  
+<input type="text" name="destination" id="destination" placeholder="Where to" onchange="whereTo()"/></input>
+<button  id="dest_button" class="btn btn-primary">GO</button>
+
+<div id="map"></div>
+<!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+<script>
+    getLocation();
+    document.getElementById("dest_button").addEventListener("click", geocodeLatLng);
+    </script>
+<script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBznL61TDKgu_Di7wVp2d5Vw7WeTYFmQIA&callback=initMap&v=weekly"
+    async
+></script>
+{% endblock %}

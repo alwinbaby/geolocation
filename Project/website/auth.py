@@ -13,7 +13,9 @@ auth= Blueprint('auth',__name__)
 def home():
     return redirect(url_for('auth.home'))
 
-
+@auth.route('/dash')
+def dash():
+    return render_template("dashboard.html",user=current_user)
 
 @auth.route('/logout')
 @login_required
@@ -62,9 +64,4 @@ def signup():
             flash('Account Created', category='success')
             
     return render_template("login.html", user=current_user)
-
-@auth.route('/find_me')
-def find_me():
-    return render_template("find_me.html")
-
 

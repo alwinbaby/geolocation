@@ -83,3 +83,84 @@
         padding: 1rem;
         font-size: medium;
       }
+      .controls {
+        margin-top: 10px;
+        border: 1px solid transparent;
+        border-radius: 2px 0 0 2px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        height: 32px;
+        outline: none;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+      }
+      
+      #origin-input,
+      #destination-input {
+        background-color: #fff;
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 300;
+        margin-left: 12px;
+        padding: 0 11px 0 13px;
+        text-overflow: ellipsis;
+        width: 200px;
+      }
+      
+      #origin-input:focus,
+      #destination-input:focus {
+        border-color: #4d90fe;
+      }
+      
+      #mode-selector {
+        color: #fff;
+        background-color: #4d90fe;
+        margin-left: 12px;
+        padding: 5px 11px 0px 11px;
+      }
+      
+      #mode-selector label {
+        font-family: Roboto;
+        font-size: 13px;
+        font-weight: 300;
+      }
+      .sidebar {
+        position: absolute;
+        margin: 20px 20px 30px 20px;
+        width: 25%;
+        top: 0;
+        bottom: 0;
+        padding: 20px;
+        background-color: #fff;
+        overflow-y: scroll;
+        visibility: hidden;
+        }
+         
+        .card {
+        font-size: small;
+        border-bottom: solid #d3d3d3 2px;
+        margin-bottom: 6px;
+        }
+         
+        .card-header {
+        font-weight: bold;
+        padding: 6px;
+        }
+         
+        .no-route {
+        background-color: #d3d3d3;
+        color: #f00;
+        }
+         
+        .obstacle-found {
+        background-color: #d3d3d3;
+        color: #fff;
+        }
+         
+        .route-found {
+        background-color: #33a532;
+        color: #fff;
+        }
+         
+        .card-details {
+        padding: 3px 6px;
+        }
